@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Deep Space Mainz Game Selector</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div id="game-scroller">
+        {% for game in games %}
+            <div class="game" game-url="{{ game.url }}">
+                <img src="{{ game.image }}" alt="{{ game.name }} Title Image">
+                <div class="game-info">
+                    <h2>{{ game.name }}</h2>
+                    <p>{{ game.description }}</p>
+                    <hr>
+                    <div class="game-tags">
+                        {% for tag in game.tags %}
+                            <span class="tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+<script src="static/script.js"></script>
+</html>

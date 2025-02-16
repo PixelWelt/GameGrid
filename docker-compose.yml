@@ -1,0 +1,9 @@
+services:
+  game-grid:
+    container_name: game-grid
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    restart: no

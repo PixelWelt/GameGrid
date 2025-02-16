@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="50375e77-d2a3-4863-b4eb-bffa4c6b7e82" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/library_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/games/game01/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/games/game01/demo-image-001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/games/game01/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/games/game02/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/games/game02/demo-image-002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/games/game02/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/sounds/select.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/sounds/start.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/index.jinja2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+        <option value="JavaScript File" />
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2t4poffgqdJS6H2fz3xmPQMeai3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Docker.Compose.executor": "Run",
+    "Docker.Dockerfile.executor": "Run",
+    "Flask server.Flask (--debug run).executor": "Run",
+    "Flask server.Flask.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "Python.app.executor": "Run",
+    "Python.library_manager.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "F:/Dev/3_GameDev/DeepSpaceGameSelector/docker-compose.yml",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/soere/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Dev\3_GameDev\DeepSpaceGameSelector\static\sounds" />
+      <recent name="F:\Dev\3_GameDev\DeepSpaceGameSelector\static\games" />
+      <recent name="F:\Dev\3_GameDev\DeepSpaceGameSelector\static\games\SoerenSpiel" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Dev\3_GameDev\DeepSpaceGameSelector" />
+      <recent name="F:\Dev\3_GameDev\DeepSpaceGameSelector\app" />
+      <recent name="F:\Dev\3_GameDev\DeepSpaceGameSelector\static\games\game02" />
+      <recent name="F:\Dev\3_GameDev\DeepSpaceGameSelector\static\games\game01" />
+      <recent name="F:\Dev\3_GameDev\DeepSpaceGameSelector\static\games\SoerenSpiel" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Docker.Compose">
+    <configuration name="Flask" type="Python.FlaskServer" nameIsGenerated="true">
+      <module name="DeepSpaceGameSelector" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11 (DeepSpaceGameSelector)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Compose" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="containerName" value="" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.Compose" />
+      <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="Flask server.Flask" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.Dockerfile" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-PY-243.24978.54" />
+        <option value="bundled-python-sdk-91e3b7efe1d4-466328ff949b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.24978.54" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="50375e77-d2a3-4863-b4eb-bffa4c6b7e82" name="Changes" comment="" />
+      <created>1739621378470</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739621378470</updated>
+      <workItem from="1739621379407" duration="913000" />
+      <workItem from="1739644711755" duration="66000" />
+      <workItem from="1739644785098" duration="42000" />
+      <workItem from="1739644929271" duration="3499000" />
+      <workItem from="1739654549405" duration="7174000" />
+      <workItem from="1739707297108" duration="2394000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DeepSpaceGameSelector$app.coverage" NAME="app Coverage Results" MODIFIED="1739656538296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DeepSpaceGameSelector$Flask.coverage" NAME="Flask Coverage Results" MODIFIED="1739707535577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DeepSpaceGameSelector$library_manager.coverage" NAME="library_manager Coverage Results" MODIFIED="1739656399174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DeepSpaceGameSelector$Flask____debug_run_.coverage" NAME="Flask Coverage Results" MODIFIED="1739656845026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>
