@@ -1,3 +1,20 @@
+"""
+This module initializes the Flask application and sets up the routes for the Game Grid project.
+
+It imports necessary modules, configures CORS, and defines the home route that renders the index page
+with a list of games retrieved from the library manager.
+
+Modules:
+    flask: The Flask framework for creating web applications.
+    flask_cors: A Flask extension for handling Cross-Origin Resource Sharing (CORS).
+    library_manager: A custom module for managing the game library.
+
+Functions:
+    home(): Renders the index page with a list of games.
+
+Usage:
+    Run this module to start the Flask development server.
+"""
 import flask
 from flask import render_template
 from flask_cors import CORS

@@ -1,3 +1,15 @@
+"""
+This module manages the game library for the Game Grid project.
+
+It provides functionality to retrieve the list of games from the static directory,
+read their configuration files, and construct a list of game dictionaries.
+
+Functions:
+    get_library(): Retrieves the list of games from the static directory.
+
+Usage:
+    Import this module and call the get_library function to get the list of games.
+"""
 import json
 import os
 
@@ -19,14 +31,14 @@ def get_library() -> json:
         FileNotFoundError: If the 'config.yaml' file is not found in a game's directory.
     """
     games = []
-    for dir in os.listdir('static/games'):
-        if os.path.isdir('static/games/' + dir):
-            loguru.logger.info('Found Game at: ' + dir)
+    for directory in os.listdir('static/games'):
+        if os.path.isdir('static/games/' + directory):
+            loguru.logger.info('Found Game at: ' + directory)
             try:
-                with open(f'static/games/{dir}/config.yaml', 'r') as file:
+                with open(f'static/games/{directory}/config.yaml', 'r') as file:
                     game_info = yaml.load(file, Loader=yaml.SafeLoader)
-                    game_info['url'] = f'/static/games/{dir}/index.html'
-                    game_info['image'] = f'/static/games/{dir}/{game_info["title_image"]}'
+                    game_info['url'] = f'/static/games/{directory}/index.html'
+                    game_info['image'] = f'/static/games/{directory}/{game_info["title_image"]}'
                     games.append(game_info)
             except FileNotFoundError:
                 loguru.logger.error('Config file not found')
