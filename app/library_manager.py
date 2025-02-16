@@ -35,7 +35,7 @@ def get_library() -> json:
         if os.path.isdir('static/games/' + directory):
             loguru.logger.info('Found Game at: ' + directory)
             try:
-                with open(f'static/games/{directory}/config.yaml', 'r') as file:
+                with open(f'static/games/{directory}/config.yaml', 'r', encoding="utf-8") as file:
                     game_info = yaml.load(file, Loader=yaml.SafeLoader)
                     game_info['url'] = f'/static/games/{directory}/index.html'
                     game_info['image'] = f'/static/games/{directory}/{game_info["title_image"]}'
