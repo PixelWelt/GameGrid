@@ -4,29 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50375e77-d2a3-4863-b4eb-bffa4c6b7e82" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/library_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/games/game01/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/games/game01/demo-image-001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/games/game01/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/games/game02/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/games/game02/demo-image-002.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/games/game02/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/sounds/select.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/sounds/start.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/index.jinja2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+    <list default="true" id="50375e77-d2a3-4863-b4eb-bffa4c6b7e82" name="Changes" comment="initialize GameGrid project with Flask backend and Docker support">
+      <changelist_data name="Soeren Herrmann" email="33161332+pixelwelt@users.noreply.github.com" automatic="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +23,32 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Soeren Herrmann &lt;33161332+pixelwelt@users.noreply.github.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "PixelWelt"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/PixelWelt/GameGrid.git",
+    "accountId": "619999cb-9416-4bce-9621-558cf10069a5"
+  }
+}]]></component>
   <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
   <component name="KubernetesApiProvider"><![CDATA[{
   "isMigrated": true
 }]]></component>
+  <component name="MaliciousPackageCheckinHandlerState">
+    <option name="packageCheck" value="true" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -168,12 +167,37 @@
       <workItem from="1739644785098" duration="42000" />
       <workItem from="1739644929271" duration="3499000" />
       <workItem from="1739654549405" duration="7174000" />
-      <workItem from="1739707297108" duration="2394000" />
+      <workItem from="1739707297108" duration="2758000" />
     </task>
+    <task id="LOCAL-00001" summary="initialize GameGrid project with Flask backend and Docker support">
+      <option name="closed" value="true" />
+      <created>1739710188688</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739710188688</updated>
+    </task>
+    <task id="LOCAL-00002" summary="initialize GameGrid project with Flask backend and Docker support">
+      <option name="closed" value="true" />
+      <created>1739710194338</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1739710194338</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT_PROFILE" value="Default" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="initialize GameGrid project with Flask backend and Docker support" />
+    <option name="LAST_COMMIT_MESSAGE" value="initialize GameGrid project with Flask backend and Docker support" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DeepSpaceGameSelector$app.coverage" NAME="app Coverage Results" MODIFIED="1739656538296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
