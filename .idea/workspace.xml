@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50375e77-d2a3-4863-b4eb-bffa4c6b7e82" name="Changes" comment="fixed logo">
-      <change afterPath="$PROJECT_DIR$/CONTRIBUTING.md" afterDir="false" />
-    </list>
+    <list default="true" id="50375e77-d2a3-4863-b4eb-bffa4c6b7e82" name="Changes" comment="add pull request template and security guidelines" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -168,7 +166,7 @@
       <workItem from="1739644785098" duration="42000" />
       <workItem from="1739644929271" duration="3499000" />
       <workItem from="1739654549405" duration="7174000" />
-      <workItem from="1739707297108" duration="3579000" />
+      <workItem from="1739707297108" duration="3894000" />
     </task>
     <task id="LOCAL-00001" summary="initialize GameGrid project with Flask backend and Docker support">
       <option name="closed" value="true" />
@@ -202,7 +200,23 @@
       <option name="project" value="LOCAL" />
       <updated>1739710936097</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add Code of Conduct and contributing guidelines, and include MIT License">
+      <option name="closed" value="true" />
+      <created>1739711296349</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1739711296349</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add pull request template and security guidelines">
+      <option name="closed" value="true" />
+      <created>1739711499993</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1739711499993</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +228,9 @@
     <MESSAGE value="initialize GameGrid project with Flask backend and Docker support" />
     <MESSAGE value="added logo" />
     <MESSAGE value="fixed logo" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed logo" />
+    <MESSAGE value="add Code of Conduct and contributing guidelines, and include MIT License" />
+    <MESSAGE value="add pull request template and security guidelines" />
+    <option name="LAST_COMMIT_MESSAGE" value="add pull request template and security guidelines" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
