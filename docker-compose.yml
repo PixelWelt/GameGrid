@@ -1,9 +1,7 @@
 services:
   game-grid:
-    container_name: game-grid
-    build:
-      context: .
-      dockerfile: dockerfile
+    container_name: gamegrid
+    image: pixelwelt/gamegrid:latest
     ports:
       - "8000:8000"
     volumes:
