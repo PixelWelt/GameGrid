@@ -3,7 +3,7 @@ services:
     container_name: game-grid
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: dockerfile
     ports:
       - "8000:8000"
     volumes:
