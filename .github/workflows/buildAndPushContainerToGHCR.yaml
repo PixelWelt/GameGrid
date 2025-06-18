@@ -14,7 +14,7 @@ jobs:
         uses: pozetroninc/github-action-get-latest-release@master
         with:
           owner: PixelWelt
-          repo: ThalamOS
+          repo: GameGrid
 
       - name: 'Checkout GitHub Action'
         uses: actions/checkout@v2
