@@ -6,9 +6,9 @@ WORKDIR /app
 RUN pip install uv
 
 COPY pyproject.toml uv.lock /app/
-RUN uv pip sync uv.lock --no-cache
+RUN uv sync
 COPY ./app /app
 
 EXPOSE 8000
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "app:app"]
+CMD ["uv", "run", "gunicorn", "--bind", "0.0.0.0:8000", "app:app"]
