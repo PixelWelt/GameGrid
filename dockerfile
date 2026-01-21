@@ -1,10 +1,14 @@
-FROM python:3.11-alpine
+FROM python:3.12-alpine
 LABEL authors="PixelWelt"
 
 WORKDIR /app
-COPY pyproject.toml /app/
-COPY poetry.lock /app/
-RUN pip install poetry && poetry install --no-root
+
+RUN pip install uv
+
+COPY pyproject.toml poetry.lock /app/
+RUN uv pip sync uv.lock --no-cache
 COPY ./app /app
+
 EXPOSE 8000
-CMD poetry run gunicorn --bind 0.0.0.0:8000 app:app
+
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "app:app"]
