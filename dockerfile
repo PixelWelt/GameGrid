@@ -5,7 +5,7 @@ WORKDIR /app
 
 RUN pip install uv
 
-COPY pyproject.toml poetry.lock /app/
+COPY pyproject.toml uv.lock /app/
 RUN uv pip sync uv.lock --no-cache
 COPY ./app /app
 
