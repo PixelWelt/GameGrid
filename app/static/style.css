@@ -1,69 +1,99 @@
-:root{
-    --primary-color: #dd5849;
-    --black-color: #000000;
-    --secondary-black-color: #1e1e1e;
-    --tertiary-color: #FEAB34;
-    --quaternary-color: #00DBBD;
-    --pentanary-color: #6B81C3;
-    --pentanary-color-alpha: rgba(107, 129, 195, 0.55);
-}
-html{
-    font-family: 'Kanit';
-    background-color: #222222;
-    color: white;
-}
-#game-scroller{
-    display: flex;
-    flex-direction: row;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-.game{
-    display: flex;
-    flex-direction: row;
-    margin: 20px;
-    width: 30vw;
-    background-color: var(--secondary-black-color);
-    color: white;
-    box-shadow: black 5px 5px 2px;
-}
-.active{
-    border: solid 4px var(--quaternary-color);
-    box-shadow: var(--quaternary-color) 1px 1px 20px;
-    animation: borderAnimation 0.2s ease-in;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --bg-color: #121212;
+    --card-color: #1e1e1e;
+    --border-color: #2d2d2d;
+    --primary-accent: #6a83cf;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --shadow-color: rgba(0, 0, 0, 0.5);
 }
 
-@keyframes borderAnimation {
-    from {
-        border-color: transparent;
-    }
-    to {
-        border-color: var(--quaternary-color);
-    }
+html {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-size: 16px;
 }
-.game h2{
-    color: var(--primary-color);
-    text-shadow: var(--tertiary-color) 1px 1px;
-    font-size: 3vh;
+
+body {
+    margin: 0;
+    padding: 2rem;
 }
-.game img{
-    height: auto;
-    max-width: 15vw;
-    width: auto;
+
+#game-scroller {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
 }
-.game-info{
-    display: block;
-    padding: 10px;
+
+.game {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-color);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    overflow: hidden;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }
-.game-tags span{
-    display: inline-flex;
-    flex-direction: row;
+
+.game:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.game.active {
+    transform: translateY(-5px) scale(1.03);
+    border: 2px solid var(--primary-accent);
+    box-shadow: 0 0 25px rgba(106, 131, 207, 0.5);
+}
+
+.game img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.game-info {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.game-info h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 0.5rem;
+}
+
+.game-info p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    flex-grow: 1;
+    margin: 0 0 1rem;
+}
+
+.game-tags {
+    display: flex;
     flex-wrap: wrap;
-    padding: 0.4vh;
-    border: solid 2px var(--pentanary-color);
-    background-color: var(--pentanary-color-alpha);
-    color: white;
+    gap: 0.5rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+
+.tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem;
     border-radius: 20px;
-    margin-right: 10px;
-    margin-top: 0.4vh;
+    background-color: rgba(106, 131, 207, 0.15);
+    color: var(--primary-accent);
+    border: 1px solid rgba(106, 131, 207, 0.3);
 }
