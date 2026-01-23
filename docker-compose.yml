@@ -5,5 +5,5 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./games:/static/games
+      - ./games:/app/static/games
     restart: always
