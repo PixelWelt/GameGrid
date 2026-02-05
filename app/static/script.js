@@ -34,7 +34,7 @@ document.addEventListener("keydown", async (evt) => {
         await play_audio(start_audio);
         const url = games[index].getAttribute("game-url");
         if (url) {
-            window.location.href = url;
+            window.open(url, '_blank');
         }
     }
 });
@@ -46,7 +46,6 @@ function play_audio(audio) {
     });
 }
 
-// --- Gamepad Support ---
 
 let gamepadIndex;
 let lastGamepadState = {axes: [], buttons: []};
@@ -75,34 +74,32 @@ function gameLoop() {
     const gamepad = navigator.getGamepads()[gamepadIndex];
     if (!gamepad) return;
 
-    // --- Axis (Stick) Navigation ---
+    if (!lastGamepadState.buttons.length) {
+        lastGamepadState = {
+            axes: gamepad.axes.map(a => a),
+            buttons: gamepad.buttons.map(b => ({pressed: b.pressed, value: b.value}))
+        };
+    }
+
     const axisThreshold = 0.7;
     const leftStickX = gamepad.axes[0];
 
-    // Left Stick Right
     if (leftStickX > axisThreshold && lastGamepadState.axes[0] < axisThreshold) {
         document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'ArrowRight'}));
     }
-    // Left Stick Left
     if (leftStickX < -axisThreshold && lastGamepadState.axes[0] > -axisThreshold) {
         document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'ArrowLeft'}));
     }
 
-    // --- Button Navigation ---
-    // D-Pad Right (Button 15)
-    if (gamepad.buttons[15] && !lastGamepadState.buttons[15]?.pressed) {
-        document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'ArrowRight'}));
-    }
-    // D-Pad Left (Button 14)
-    if (gamepad.buttons[14] && !lastGamepadState.buttons[14]?.pressed) {
-        document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'ArrowLeft'}));
-    }
-    // A Button (or X on PS, Button 0) for Enter
-    if (gamepad.buttons[0] && !lastGamepadState.buttons[0]?.pressed) {
+    // A Button (or X on PS, Button 0) for enter
+    if (
+        gamepad.buttons[0] &&
+        !lastGamepadState.buttons[0]?.pressed &&
+        gamepad.buttons[0].pressed
+    ) {
         document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'Enter'}));
     }
 
-    // Store current state for next frame
     lastGamepadState = {
         axes: gamepad.axes.map(a => a),
         buttons: gamepad.buttons.map(b => ({pressed: b.pressed, value: b.value}))

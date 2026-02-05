@@ -6,4 +6,6 @@ services:
       dockerfile: dockerfile
     ports:
       - "8000:8000"
+    volumes:
+      - ./games:/app/static/games
     restart: no
