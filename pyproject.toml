@@ -1,6 +1,6 @@
 [project]
 name = "GameGrid"
-version = "0.1.1"
+version = "1.4.0"
 description = "A flask wrapper for your WebGL games"
 readme = "README.md"
 requires-python = ">=3.10,<3.13"
@@ -22,7 +22,7 @@ dependencies = [
   "gunicorn==23.0.0",
   "PyYAML==6.0.3",
   "Werkzeug==3.1.5",
-  "win32_setctime==1.2.0"
+  "win32_setctime==1.2.0",
 ]
 
 [project.urls]

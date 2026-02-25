@@ -34,7 +34,7 @@ document.addEventListener("keydown", async (evt) => {
         await play_audio(start_audio);
         const url = games[index].getAttribute("game-url");
         if (url) {
-            window.location.href = url;
+            window.open(url, "_blank");
         }
     }
 });
