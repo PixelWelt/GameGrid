@@ -1,6 +1,6 @@
 [project]
 name = "GameGrid"
-version = "1.4.0"
+version = "1.4.1"
 description = "A flask wrapper for your WebGL games"
 readme = "README.md"
 requires-python = ">=3.10,<3.13"
