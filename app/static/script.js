@@ -11,6 +11,9 @@ const start_audio = new Audio("static/sounds/start.mp3");
 
 document.body.style.cursor = 'none';
 
+let gameStartTimeout;
+const GAME_START_COOLDOWN = 1000; // 1 second cooldown between game starts
+
 document.addEventListener("keydown", async (evt) => {
     if (games.length === 0) return;
 
@@ -31,18 +34,33 @@ document.addEventListener("keydown", async (evt) => {
     }
 
     if (evt.key === "Enter") {
+        if (gameStartTimeout) return; // Ignore if within cooldown period
+
+        gameStartTimeout = true;
         await play_audio(start_audio);
         const url = games[index].getAttribute("game-url");
         if (url) {
             window.open(url, '_blank');
         }
+
+        // Reset cooldown after delay
+        setTimeout(() => {
+            gameStartTimeout = false;
+        }, GAME_START_COOLDOWN);
     }
 });
 
 function play_audio(audio) {
     return new Promise(res => {
-        audio.play().catch(() => res()); // Handle cases where play is interrupted
-        audio.onended = res;
+        const onended = () => {
+            audio.removeEventListener('ended', onended);
+            res();
+        };
+        audio.addEventListener('ended', onended);
+        audio.play().catch(() => {
+            audio.removeEventListener('ended', onended);
+            res();
+        });
     });
 }
 
@@ -77,28 +95,35 @@ function gameLoop() {
 
     // --- Axis (Stick) Navigation ---
     const axisThreshold = 0.7;
-    const leftStickX = gamepad.axes[0];
+    const leftStickX = gamepad.axes[0] || 0;
+    const lastLeftStickX = lastGamepadState.axes[0] || 0;
 
     // Left Stick Right
-    if (leftStickX > axisThreshold && lastGamepadState.axes[0] < axisThreshold) {
+    if (leftStickX > axisThreshold && lastLeftStickX < axisThreshold) {
         document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'ArrowRight'}));
     }
     // Left Stick Left
-    if (leftStickX < -axisThreshold && lastGamepadState.axes[0] > -axisThreshold) {
+    if (leftStickX < -axisThreshold && lastLeftStickX > -axisThreshold) {
         document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'ArrowLeft'}));
     }
 
     // --- Button Navigation ---
     // D-Pad Right (Button 15)
-    if (gamepad.buttons[15] && !lastGamepadState.buttons[15]?.pressed) {
+    const btn15 = gamepad.buttons[15];
+    const lastBtn15 = lastGamepadState.buttons[15];
+    if (btn15?.pressed && !lastBtn15?.pressed) {
         document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'ArrowRight'}));
     }
     // D-Pad Left (Button 14)
-    if (gamepad.buttons[14] && !lastGamepadState.buttons[14]?.pressed) {
+    const btn14 = gamepad.buttons[14];
+    const lastBtn14 = lastGamepadState.buttons[14];
+    if (btn14?.pressed && !lastBtn14?.pressed) {
         document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'ArrowLeft'}));
     }
     // A Button (or X on PS, Button 0) for Enter
-    if (gamepad.buttons[0] && !lastGamepadState.buttons[0]?.pressed) {
+    const btn0 = gamepad.buttons[0];
+    const lastBtn0 = lastGamepadState.buttons[0];
+    if (btn0?.pressed && !lastBtn0?.pressed) {
         document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'Enter'}));
     }
 
